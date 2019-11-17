@@ -10,10 +10,10 @@ Windows scheduled task, although the Java program does also have
 the built-in ability to capture multiple executions of the desired
 external program, with a specified delay between each call.
 
-If you want to change the external command being run, you should
-only need to create a copy of all these files somewhere, and then
-change only the "RunPSList.bat" script.
-
+If you want to change the external command being run, or run more 
+instances, you should only need to place a new copy of all these 
+files somewhere, e.g. "C:\jlogger_tasklist" and then change only 
+the "RunPSList.bat" script.
 
 ## INSTALLATION / USAGE
 See the comments at the top of JLogger.java
