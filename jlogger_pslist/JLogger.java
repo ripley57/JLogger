@@ -154,7 +154,7 @@ public class JLogger {
 				// More dumps to come, so add delay.
 				try {
 					Log("");
-					Log("Sleeping for " + nDelaySecs + " seconds before next stack dump ...");
+					Log("Sleeping for " + nDelaySecs + " seconds before next execution ...");
 					Log("");
 					Thread.sleep(nDelaySecs * 1000);
 				}
