@@ -15,7 +15,7 @@ only need to create a copy of all these files somewhere, and then
 change only the "RunPSList.bat" script.
 
 
-## INSTALLATION
+## INSTALLATION / USAGE
 See the comments at the top of JLogger.java
 
 
