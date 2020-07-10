@@ -35,7 +35,7 @@ public class JLogger {
 				"java JLogger [-r num] [-d secs] -s dump_dir -c command	[args]		  	\n" +
 				"Where:																	\n" +
 				"   -v            - Display verbose output.								\n" +
-				"   -r num        - Number of consecutive dumps (default 1).			\n" +
+				"   -r num        - Number of consecutive dumps (default=1, -1=infinite).	\n" +
 				"   -d secs       - Delay between consecutive dumps (default 60 secs).	\n" +
 				"   -s dump_dir   - Directory containing the jlogger.properties	log4j   \n" +
 				"                   config file and also the JLogger runtime files.     \n" +
@@ -148,9 +148,9 @@ public class JLogger {
 		String[] strCmd = strDumpCmd;
 		
 		// Run the external command n times.
-		for (int i=1; i<=nTotalDumps; i++) {
+		for (int i=1; i<=nTotalDumps || nTotalDumps<0; i++) {
 			runCmd(strCmd, i, nTotalDumps);
-			if (i < nTotalDumps) {
+			if (i < nTotalDumps || nTotalDumps < 0) {
 				// More dumps to come, so add delay.
 				try {
 					Log("");
